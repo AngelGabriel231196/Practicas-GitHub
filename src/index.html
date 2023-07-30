@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>login-register</title>
+</head>
+<body>
+
+<main class="container">
+    <div class="contenedor_todo">
+
+        <div class="caja_trasera">
+            <div class="caja_trasera_login">
+                <h3>Ya tienes cuenta?</h3>
+                <p>Inicia sesión para acceder a la página</p>
+                <button id="btn_iniciar_sesion" class="btn btn-primary">Iniciar sesión</button>
+            </div>
+            <div class="caja_trasera_register">
+                <h3>Aún no tienes cuenta?</h3>
+                <p>Regístrate para iniciar sesión</p>
+                <button id="btn_registrarse" class="btn btn-primary">Registrarse</button>
+            </div>
+        </div>
+        <!--Formulario de login y register-->
+        <div class="contenedor_login-register">
+            <!--login-->
+            <form action="./vistas/home.html" class="formulario_login">
+                <h2>Iniciar sesión</h2>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="correo_login" placeholder="Correo Electrónico" required>
+                </div> 
+                <div class="form-group">
+                    <input type="password" class="form-control" id="contrasena_login" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+            <form action="./vistas/home.html" class="formulario_register">
+                <!--registro-->
+                <h2>Registrarse</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nombre_completo" placeholder="Nombre Completo" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Ingresa solo letras y espacios">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="correo_registro" placeholder="Correo Electrónico">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="contrasena_registro" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

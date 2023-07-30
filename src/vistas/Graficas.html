@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/mainGraficas.css">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+            <li><a class="menu" href="./home.html">Home</a></li>
+            <li><a class="menu" href="./Citas.html">Agendar Citas</a></li>
+            <li><a class="menu" href="./Especialidades.html">Especialidades</a></li>
+            <li><a class="menu" href="./Graficas.html">Graficas</a></li>
+            <li><a class="menu" href="../index.html">Exit</a></li>
+        </ul>
+
+    <div>
+        <center><h1>Especificaciones</h1></center>
+        <hr>
+        <h3>En este apartado podemos visualizar las grafias de las especialidades mas demandadas, la cantidad de pacientes hombres y mujeres que atendemos y
+            los dias mas concurridos a lo largo de 1 semana.
+        </h3>
+    </div>
+    <div class="grafica1">
+        <h3>Cantidad por genero</h3>
+        <hr>
+        <canvas id="g1"></canvas>
+    </div>
+    <div>
+        <h3>Citas por especialidad</h3>
+        <hr>
+        <canvas id="g2"></canvas>
+    </div>
+    <div class="grafica2
+    ">
+        <h3>Cita por dia semana</h3>
+        <canvas id="g3"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js" integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const ctxG1 = document.getElementById('g1');
+        const ctxG2 = document.getElementById('g2');
+        const ctxG3 = document.getElementById('g3');
+
+        const valoresGenero = ["Hombres","Mujeres"];
+        const totalPersonas = [14, 78];
+
+        const especialidad = ["Cardiología","Pediatria","Odontología"];
+        const totalVisitas = [89,10,9];
+
+        const dia = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+        const cantidad = [87,15,5,13,21];
+
+        const newGraphicGenero = new Chart(ctxG1,{
+            type: 'bar',
+            data:{
+                labels: valoresGenero,
+                label: valoresGenero,
+                datasets: [{
+                    data: totalPersonas,
+                    backgroundColor:[
+                        'rgba(54, 162, 235, 0.4)',
+                        'rgba(255, 99, 132, 0.4)'
+                    ],
+                    borderColor:[
+                        'rgba(55, 109, 217, 0.7)',
+                        'rgba(217, 55, 55, 0.7)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        })
+
+        const newGraphicCitas = new Chart(ctxG2,{
+            type: 'pie',
+            data: {
+                labels: especialidad,
+                datasets:[{
+                    data: totalVisitas,
+                    backgroundColor:[
+                        'rgba(247, 220, 111, 0.4)',
+                        'rgba(248, 196, 113, 0.4)',
+                        'rgba(240, 178, 122, 0.4)'
+                    ],
+                    borderColor:[
+                        'rgba(247, 220, 111, 0.7)',
+                        'rgba(248, 196, 113, 0.7)',
+                        'rgba(240, 178, 122, 0.7)'
+                    ]
+                }]
+            }
+        });
+
+        const newGraphicDias = new Chart(ctxG3,{
+            type: 'line',
+            data: {
+                labels: dia,
+                datasets:[{
+                    label: 'Dias',
+                    data: cantidad,
+                    fill: false,
+                    backgroundColor:[
+                        'rgba(120, 200, 89, 1)'
+                    ],
+                    borderColor:[
+                        'rgba(120, 200, 89, 0.7)'
+                    ]
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

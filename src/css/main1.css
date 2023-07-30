@@ -1,0 +1,129 @@
+:root {
+    --alazan: rgb(255, 0, 0);
+    --lead: rgb(31, 30, 30);
+    --blue: rgb(0, 0, 0);
+    --violet: rgb(0, 0, 0);
+    --text-white: hsl(0, 0%, 100%);
+    --text-light-gray: hsl(0, 0%, 14%);
+    --body-bg-color:rgba(250, 0, 0, 0.822);
+    --glass-bg-color: hsla(0, 0%, 100%, 0.05);
+    --border-color: hsla(0, 0%, 100%, 0.25);
+    --blur: blur(5px);
+    --button-hover-color: hsla(0, 0%, 0%, 0.3);
+    --white: rgb(234,220,203);
+    --gray: rgb(0, 0, 0);
+    --sky-blue: rgb(145,131,121);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--sky-blue);
+    color: var(--text-light-gray);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+
+a
+{
+    text-decoration: black;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.form-main{
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-decoration: black;
+    color: black;
+}
+
+.form-content{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+.form-content .box{
+    border-color: var(--glass-bg-color);
+    border: 1px solid var(--border-color);
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: var(--blur);
+    color: black;
+    text-decoration: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 50;
+    padding: 50;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+.menu{
+    display: block;
+    color: rgb(149, 83, 64);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+.Especialidad{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 16px;
+}
+
+img{
+    height: 150px;
+    width: 150px;
+}
+.box-neuro{
+    align-items: center;
+    border-color: var(--glass-bg-color);
+    border: 1px solid var(--border-color);
+    padding: 90px 100px;
+    border-radius: 20px;
+    backdrop-filter: var(--blur);
+    color: black;
+    text-decoration: black;
+}
+.imagen-neuro{
+    height: 300px;
+    width: 300px;
+}
+.documentacion{
+    
+    height: 500px;
+    width: 900px; 
+    padding: 10px;
+    right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-decoration: black;
+    color: black;
+}
+.doc-padre{
+    position: absolute;
+    left: 200px;
+}
